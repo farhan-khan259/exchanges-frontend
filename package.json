@@ -1,0 +1,27 @@
+{
+  "name": "@khata/frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build-offline.mjs && vite --host 0.0.0.0",
+    "build": "node scripts/build-offline.mjs && tsc --noEmit && vite build && node scripts/build-sw.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "decimal.js": "10.6.0",
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-router-dom": "7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.16",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.4",
+    "tailwindcss": "4.1.16",
+    "typescript": "5.9.3",
+    "vite": "7.1.12",
+    "esbuild": "0.25.12"
+  }
+}
