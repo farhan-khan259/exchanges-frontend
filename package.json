@@ -3,13 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/build-offline.mjs && vite --host 0.0.0.0",
-    "build": "node scripts/build-offline.mjs && tsc --noEmit && vite build && node scripts/build-sw.mjs",
+    "dev": "node init && node scripts/build-offline.mjs && vite --host 0.0.0.0",
+    "build": "node init && node scripts/build-offline.mjs && tsc --noEmit && vite build && node scripts/build-sw.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "decimal.js": "10.6.0",
+    "dotenv": "^8.2.0",
     "lucide-react": "0.468.0",
+    "node-fetch": "^3.3.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "react-router-dom": "7.18.4"
