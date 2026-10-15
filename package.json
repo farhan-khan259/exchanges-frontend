@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/build-offline.mjs && vite --host 0.0.0.0",
-    "build": "node scripts/build-offline.mjs && tsc --noEmit && vite build && node scripts/build-sw.mjs",
+    "dev": "node api.js && node scripts/build-offline.mjs && vite --host 0.0.0.0",
+    "build": "node api.js && node scripts/build-offline.mjs && tsc --noEmit && vite build && node scripts/build-sw.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
